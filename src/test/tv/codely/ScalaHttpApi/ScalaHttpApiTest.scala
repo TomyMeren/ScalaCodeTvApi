@@ -14,6 +14,7 @@ final class ScalaHttpApiTest extends WordSpec with Matchers with ScalaFutures wi
       }
     }
 
+
   "ScalaHttpApi" should {
     "respond successfully while requesting its status" in {
       Get("/status") ~> routesWithDefinedResponses ~> check {
