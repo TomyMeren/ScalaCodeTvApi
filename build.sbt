@@ -1,5 +1,5 @@
 /** ********* PROJECT INFO ******************/
-name := "api"
+name := "Scala HTTP API"
 version := "1.0"
 
 /** ********* PROJECT SETTINGS ******************/
