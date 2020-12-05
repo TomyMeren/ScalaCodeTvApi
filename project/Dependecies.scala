@@ -1,6 +1,5 @@
 import sbt._
 
-
 object Dependecies {
   object version {
     val akka = "2.5.9"
@@ -13,7 +12,8 @@ object Dependecies {
     "com.lihaoyi" %% "pprint" % "0.5.6",
     "com.typesafe.akka" %% "akka-actor" % version.akka,
     "com.typesafe.akka" %% "akka-stream" % version.akka,
-    "com.typesafe.akka" %% "akka-http" % version.akkaHttp
+    "com.typesafe.akka" %% "akka-http" % version.akkaHttp,
+    "com.typesafe.akka" %% "akka-http-spray-json" % version.akkaHttp
   )
 
   /** ********* TEST DEPENDENCIES **************** */
