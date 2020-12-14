@@ -2,10 +2,10 @@ package tv.codely.scala_http_api.entry_point
 
 import spray.json._
 import akka.http.scaladsl.model.{ContentTypes, StatusCodes}
+import tv.codely.scala_http_api.module.user.domain.UserStub
 import tv.codely.scala_http_api.module.user.infraestructure.marshaller.UserMarshaller
-import tv.codely.scala_http_api.module.user.infraestructure.stub.UserStub
 
-final class UserSpec extends AcceptanceScpec {
+final class UserSpect extends AcceptanceScpec {
 
   "respond sytem users while requesting a stub" in get("/users") {
 

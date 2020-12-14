@@ -5,6 +5,7 @@ import akka.http.scaladsl.testkit.ScalatestRouteTest
 import akka.util.ByteString
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.{Matchers, WordSpec}
+import tv.codely.scala_http_api.module.course.infraestructure.dependency_injection.CourseModuleDependencyContainer
 import tv.codely.scala_http_api.module.user.infraestructure.dependency_injection.UserModuleDependencyContainer
 import tv.codely.scala_http_api.module.video.infraestructure.dependency_injection.VideoModuleDependencyContainer
 
@@ -16,7 +17,8 @@ protected[entry_point] abstract class AcceptanceScpec
   private val routes = new Routes(
     new EntryPointDependencyContainer(
       new UserModuleDependencyContainer,
-      new VideoModuleDependencyContainer
+      new VideoModuleDependencyContainer,
+      new CourseModuleDependencyContainer
     )
   )
 

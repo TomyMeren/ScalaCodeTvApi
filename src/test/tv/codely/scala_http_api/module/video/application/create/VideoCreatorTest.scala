@@ -1,7 +1,6 @@
-package tv.codely.scala_http_api.module.video.application.search
+package tv.codely.scala_http_api.module.video.application.create
 
 import tv.codely.scala_http_api.module.video.VideoUnitTestCase
-import tv.codely.scala_http_api.module.video.application.create.VideoCreator
 import tv.codely.scala_http_api.module.video.domain.VideoStub
 
 final class VideoCreatorTest extends VideoUnitTestCase {

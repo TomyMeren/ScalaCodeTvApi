@@ -1,7 +1,7 @@
-package tv.codely.scala_http_api.module.user.application
+package tv.codely.scala_http_api.module.user.application.search
 
 import tv.codely.scala_http_api.module.user.UserUnitTestCase
-import tv.codely.scala_http_api.module.user.infraestructure.stub.UserStub
+import tv.codely.scala_http_api.module.user.domain.UserStub
 
 final class UserSearcherTest extends UserUnitTestCase {
   private val searcher = new UserSearcher(repository)

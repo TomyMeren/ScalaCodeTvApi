@@ -4,6 +4,7 @@ import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
 import com.typesafe.config.ConfigFactory
+import tv.codely.scala_http_api.module.course.infraestructure.dependency_injection.CourseModuleDependencyContainer
 import tv.codely.scala_http_api.module.user.infraestructure.dependency_injection.UserModuleDependencyContainer
 import tv.codely.scala_http_api.module.video.infraestructure.dependency_injection.VideoModuleDependencyContainer
 
@@ -27,7 +28,9 @@ object ScalaHttpApi extends App {
 
     new UserModuleDependencyContainer,
 
-    new VideoModuleDependencyContainer
+    new VideoModuleDependencyContainer,
+
+    new CourseModuleDependencyContainer
   )
 
   val routes = new Routes(container)

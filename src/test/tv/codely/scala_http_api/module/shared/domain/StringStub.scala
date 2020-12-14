@@ -1,4 +1,4 @@
-package tv.codely.scala_http_api.shared.infraestruture.stub
+package tv.codely.scala_http_api.module.shared.domain
 
 import scala.util.Random
 

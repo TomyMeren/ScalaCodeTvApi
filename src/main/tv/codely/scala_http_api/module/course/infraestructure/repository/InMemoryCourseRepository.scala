@@ -1,11 +1,17 @@
-package tv.codely.scala_http_api.module.user.infraestructure.repository
+package tv.codely.scala_http_api.module.course.infraestructure.repository
 
-import tv.codely.scala_http_api.module.course.domain.CourseRepository
-import tv.codely.scala_http_api.module.video.domain.Video
+import tv.codely.scala_http_api.module.course.domain.{Course, CourseRepository}
 
-private class InMemoryCourseRepository extends CourseRepository {
+final class InMemoryCourseRepository extends CourseRepository {
 
-  val courses = ???
+  private var courses: Seq[Course] = Seq(
+    Course(
+      id = "5654gdfg-260b-420a-b08c-654645645",
+      title = "scala para tontos",
+      numLecciones = 3,
+      profesor = "tomy"
+    )
+  )
 
   def all(): Seq[Course] = courses
 

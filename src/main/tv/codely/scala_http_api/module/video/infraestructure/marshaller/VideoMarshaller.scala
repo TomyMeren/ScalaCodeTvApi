@@ -8,7 +8,7 @@ object VideoMarshaller extends SprayJsonSupport with DefaultJsonProtocol {
 
   implicit object VideoIdMarshaller extends JsonFormat[VideoId] {
 
-    def write(value: VideoId): JsValue = JsString(value.toString)
+    def write(value: VideoId): JsValue = JsString(value.value.toString)
 
     def read(value: JsValue): VideoId = value match {
       case JsString(id) => VideoId(id)
